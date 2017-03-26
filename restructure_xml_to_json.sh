@@ -1,7 +1,10 @@
 INPUT_FILE=${1:-"shared_dependencies_original.xml"}
 OUTPUT_FILE=${2:-"result.json"}
 
-cp $INPUT_FILE $OUTPUT_FILE
+if [ $INPUT_FILE != $OUTPUT_FILE ]
+    then 
+        cp $INPUT_FILE $OUTPUT_FILE
+fi
 
 # Removes xml tag
 sed -i "" 's/<\?xml version="1.0" encoding="UTF-8"\?>//g' $OUTPUT_FILE
