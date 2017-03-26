@@ -4,3 +4,5 @@ OUTPUT_FILE=${2:-"result.json"}
 cp $INPUT_FILE $OUTPUT_FILE
 
 ./restructure_xml_to_json.sh $OUTPUT_FILE $OUTPUT_FILE
+
+echo "Check it out: ${OUTPUT_FILE}"

@@ -26,5 +26,3 @@ perl -0777pe 's/,(\s*)]/$1]/gm' -i $OUTPUT_FILE
 
 # Remove blank lines
 perl -0777pe 's/[\n\r]+$|^[\n\r]+//gm' -i $OUTPUT_FILE
-
-echo "Check it out: ${OUTPUT_FILE}"
