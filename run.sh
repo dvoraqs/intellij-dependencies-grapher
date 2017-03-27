@@ -6,15 +6,15 @@ TEMP_FILE="run/temp.json"
 TEMP_FILE_2="run/temp2.txt"
 
 echo "Building prerequisites..."
-./prerequisites.sh
+./scripts/prerequisites.sh
 
 echo "Digesting input..."
-./restructure_xml_to_json.sh $INPUT_FILE $TEMP_FILE
-node restructure_json_to_other.js $TEMP_FILE > $TEMP_FILE_2
-./cleanup_data.sh $TEMP_FILE_2 $OUTPUT_FILE
+./scripts/restructure_xml_to_json.sh $INPUT_FILE $TEMP_FILE
+node scripts/restructure_json_to_other.js $TEMP_FILE > $TEMP_FILE_2
+./scripts/cleanup_data.sh $TEMP_FILE_2 $OUTPUT_FILE
 
 echo "Uploading graph..."
-./write_graph.sh $OUTPUT_FILE
+./scripts/write_graph.sh $OUTPUT_FILE
 
 rm -rf run
 

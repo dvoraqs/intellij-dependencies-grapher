@@ -1,5 +1,5 @@
 var input_file = process.argv.slice(2);
-var files = require("./" + input_file);
+var files = require("../" + input_file);
 
 console.log('digraph "shared" { ');
 
