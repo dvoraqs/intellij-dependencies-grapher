@@ -1,0 +1,15 @@
+<v1:xo version="1.0" xmlns:v1="http://buschmais.com/xo/schema/v1.0">
+    <xo-unit name="dependency-graph">
+        <description></description>
+        <url>file:dependency-graph</url>
+        <provider>com.buschmais.xo.neo4j.api.Neo4jXOProvider</provider>
+        <types>
+            <type>com.gbtec.dependency.graph.domain.Group</type>
+            <type>com.gbtec.dependency.graph.domain.Principal</type>
+            <type>com.gbtec.dependency.graph.domain.User</type>
+        </types>
+        <validation-mode>NONE</validation-mode>
+        <concurrency-mode>SINGLETHREADED</concurrency-mode>
+        <default-transaction-attribute>MANDATORY</default-transaction-attribute>
+    </xo-unit>
+</v1:xo>
