@@ -5,7 +5,7 @@ I'm hoping for this to become an automated way of taking exports from dependency
 
 Usage
 
-`./regex.sh [input file] [output file]`
+`./run.sh [input file] [output file]`
 
 
 How is it supposed to work?

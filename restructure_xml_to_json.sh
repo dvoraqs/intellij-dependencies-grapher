@@ -10,10 +10,11 @@ fi
 sed -i "" 's/<\?xml version="1.0" encoding="UTF-8"\?>//g' $OUTPUT_FILE
 
 # Changes root tag
-sed -i "" 's/<root isBackward="true">/[/g' $OUTPUT_FILE
+sed -i "" 's/<root.*>/[/g' $OUTPUT_FILE
 sed -i "" 's/<\/root>/]/g' $OUTPUT_FILE
 
 # Changes file tag
+sed -i "" 's/<file path="\(.*\)" \/>/{"name": "\1", "size": 1, "imports": []},/g' $OUTPUT_FILE
 sed -i "" 's/<file path="\(.*\)">/{"name": "\1", "size": 1, "imports": [/g' $OUTPUT_FILE
 sed -i "" 's/<\/file>/]},/g' $OUTPUT_FILE
 
