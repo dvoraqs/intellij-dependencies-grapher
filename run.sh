@@ -1,5 +1,6 @@
-INPUT_FILE=${1:-"examples/shared_dependencies_original.xml"}
+INPUT_FILE=${1:-"examples/dependencies.xml"}
 OUTPUT_FILE=${2:-"result.txt"}
+GRAPH_FOLDER=${3:-"~/Documents/Neo4j/dependencies.graphdb"}
 
 mkdir run
 TEMP_FILE="run/temp.json"
@@ -14,8 +15,9 @@ node scripts/restructure_json_to_other.js $TEMP_FILE > $TEMP_FILE_2
 ./scripts/cleanup_data.sh $TEMP_FILE_2 $OUTPUT_FILE
 
 echo "Uploading graph..."
-./scripts/write_graph.sh $OUTPUT_FILE
+./scripts/write_graph.sh $OUTPUT_FILE $GRAPH_FOLDER
 
+rm -rf neo4j-java
 rm -rf run
 
 echo "Done! Check it out: ${OUTPUT_FILE}"

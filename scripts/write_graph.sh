@@ -1,5 +1,5 @@
 INPUT_FILE=${1:-"result.txt"}
-OUTPUT_FILE=${2:-"/Users/dvoraqs/Documents/Neo4j/shared.graphdb"}
+OUTPUT_FILE=${2:-"~/Documents/Neo4j/dependencies.graphdb"}
 JAR_FILE="neo4j-java/target/dependency-graph-0.0.1-SNAPSHOT.jar"
 
 rm -rf $OUTPUT_FILE

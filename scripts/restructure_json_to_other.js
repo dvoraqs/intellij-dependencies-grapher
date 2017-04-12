@@ -1,7 +1,7 @@
 var input_file = process.argv.slice(2);
 var files = require("../" + input_file);
 
-console.log('digraph "shared" { ');
+console.log('digraph { ');
 
 for (var i = 0; i < files.length; i++) {
     var file = files[i].name;

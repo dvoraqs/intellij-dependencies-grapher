@@ -5,7 +5,7 @@ I'm hoping for this to become an automated way of taking exports from dependency
 
 Usage
 
-`./run.sh [input file] [output file]`
+`./run.sh [input file] [output file] [graph location]`
 
 
 How is it supposed to work?
@@ -16,6 +16,10 @@ We might try to clean up the data so that we can reduce noise and try to focus o
 
 
 Dependency information
+
+Install `node` and `git` if you need to.
+
+`mvn` is used to build a project dependency that is cloned through Git. Do `brew install maven`.
 
 Using `sed` for the majority of regex replacement for now.
 
